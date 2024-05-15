@@ -7,3 +7,9 @@ body {
     background-color: aqua;
     font-family: 'Courier New', Courier, monospace;
 }
+
+footer {
+    background-color:azure;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
