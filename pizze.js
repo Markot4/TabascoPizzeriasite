@@ -32,3 +32,13 @@ var pizze = {
         "sastojci": ["pršut","sir","umak od rajčica", "rikula", "mozzarela", "parmezan", "masline"]
     }
 }
+
+var listaPizzaElement = document.getElementById("popisPizza");
+console.log(listaPizzaElement)
+for (const [key, value] of Object.entries(pizze)) {
+    const pizza = document.createElement("li");
+    pizza.innerText = value.naziv  
+    listaPizzaElement.appendChild(pizza)
+}
+listaPizzaElement.innerText = pizzeStr;
+
