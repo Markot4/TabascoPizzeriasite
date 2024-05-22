@@ -32,7 +32,9 @@ var pizze = {
         "sastojci": ["pršut","sir","umak od rajčica", "rikula", "mozzarela", "parmezan", "masline"]
     }
 }
-
+function naruciPizzu(pizza){
+    console.log("Naručujem pizzu.", pizza)
+}
 function odaberiPizzu(pizza) {
     console.log("Odabrana je pizza:", pizza)
     const detaljElement = document.getElementById("detaljiPizze");
@@ -45,8 +47,9 @@ function odaberiPizzu(pizza) {
     sastojciElement.innerText = pizza.sastojci
     const slikaElement =document.getElementById("slika");
     slikaElement.src = "slike/" + pizza.slika
+    const buttonElement = document.getElementById("naruciButton");
+    buttonElement.onclick = () => naruciPizzu(pizza)
 }
-
 var listaPizzaElement = document.getElementById("popisPizza");
 console.log(listaPizzaElement)
 for (const [key, pizza] of Object.entries(pizze)) {
