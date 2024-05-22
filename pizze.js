@@ -8,8 +8,8 @@ var pizze = {
         "sastojci": ["šunka", "sir", "šampinjoni"]
     },
     "margarita": {
-        "naziv": "Margarita",
-        "cijena": 45,
+        "naziv": "Majstor i Margarita",
+        "cijena": 46,
         "slika": "pizza-margarita.jpg",
         "sastojci": ["sir"]
     },
@@ -33,12 +33,25 @@ var pizze = {
     }
 }
 
+function odaberiPizzu(pizza) {
+    console.log("Odabrana je pizza:", pizza)
+    const imeElement = document.getElementById("imepizze");
+    imeElement.innerText = pizza.naziv
+    const cijenaElement =document.getElementById("cijena");
+    cijenaElement.innerText = pizza.cijena + " kn"
+    const sastojciElement =document.getElementById("sastojci");
+    sastojciElement.innerText = pizza.sastojci
+    const slikaElement =document.getElementById("slika");
+    slikaElement.src = "slike/" + pizza.slika
+}
+
 var listaPizzaElement = document.getElementById("popisPizza");
 console.log(listaPizzaElement)
-for (const [key, value] of Object.entries(pizze)) {
-    const pizza = document.createElement("li");
-    pizza.innerText = value.naziv  
-    listaPizzaElement.appendChild(pizza)
+for (const [key, pizza] of Object.entries(pizze)) {
+    const pizzaElement = document.createElement("li");
+    pizzaElement.onclick = () => odaberiPizzu(pizza)
+    pizzaElement.innerText = pizza.naziv  
+    listaPizzaElement.appendChild(pizzaElement)
 }
-listaPizzaElement.innerText = pizzeStr;
+
 
