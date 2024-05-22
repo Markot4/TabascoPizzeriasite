@@ -35,6 +35,8 @@ var pizze = {
 
 function odaberiPizzu(pizza) {
     console.log("Odabrana je pizza:", pizza)
+    const detaljElement = document.getElementById("detaljiPizze");
+    detaljElement.style.display = "block"
     const imeElement = document.getElementById("imepizze");
     imeElement.innerText = pizza.naziv
     const cijenaElement =document.getElementById("cijena");
@@ -54,4 +56,5 @@ for (const [key, pizza] of Object.entries(pizze)) {
     listaPizzaElement.appendChild(pizzaElement)
 }
 
-
+const detaljElement = document.getElementById("detaljiPizze");
+detaljElement.style.display = "none"
