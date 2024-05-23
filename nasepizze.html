@@ -36,18 +36,23 @@
     <div id="narudzba">
       <form>
         <label for="fname">Ime:</label><br>
-        <input type="text" id="fname" name="fname"><br>
+        <input type="text" id="fname" name="fname" onchange="promjenaUNarudzbi()"><br>
         <label for="lname">Prezime:</label><br>
-        <input type="text" id="lname" name="lname"><br>
+        <input type="text" id="lname" name="lname" onchange="promjenaUNarudzbi()"><br>
         <label for="number">Broj telefona:</label><br>
-        <input type="text" id="number" name="number"><br>
+        <input type="text" id="number" name="number" onchange="promjenaUNarudzbi()"><br>
         <label for="address">Adresa</label><br>
-        <input for="text" id="address" name="address"><br>
+        <input for="text" id="address" name="address" onchange="promjenaUNarudzbi()"><br>
         <p>Velika ili Jumbo:</p>
-        <input type="radio" id="vpizza" name="velicina" checked="checked">
+        <input type="radio" id="vpizza" name="velicina" value="velika" checked="checked" onclick="promjenaUNarudzbi()">
         <label for="vpizza">Velika Pizza</label><br>
-        <input type="radio" id="jpizza" name="velicina">
+        <input type="radio" id="jpizza" name="velicina" value="jumbo" onclick="promjenaUNarudzbi()">
         <label for="jpizza">Jumbo Pizza</label><br>
+        <p>Dodaci: </p>
+        <input type="checkbox" id="rajcica" name="rajcica" value="Rajcica" onchange="promjenaUNarudzbi()">
+        <label for="rajcica"> Rajčica</label><br>
+        <input type="checkbox" id="peperoni" name="peperoni" value="Peperoni" onchange="promjenaUNarudzbi()">
+        <label for="peperoni">Peperoni</label><br><br>
         <input type="submit" value="Submit">
       </form>
     </div>
