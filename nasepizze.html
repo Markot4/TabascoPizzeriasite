@@ -25,13 +25,31 @@
         <h3>
           Cijena 
         </h3>
-        <span id="cijena"></span>
+        Velika: <span id="velikacijena"></span>, 
+        Jumbo: <span id="jumbocijena"></span>
         <div>
           <img id="slika" width="400" height="300"/>
         </div>
         <button type="button" id="naruciButton">Naruči!</button>
       </div>
-      <div id="narudzba"></div>
+    </div>
+    <div id="narudzba">
+      <form>
+        <label for="fname">Ime:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Prezime:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="number">Broj telefona:</label><br>
+        <input type="text" id="number" name="number"><br>
+        <label for="address">Adresa</label><br>
+        <input for="text" id="address" name="address"><br>
+        <p>Velika ili Jumbo:</p>
+        <input type="radio" id="vpizza" name="velicina" checked="checked">
+        <label for="vpizza">Velika Pizza</label><br>
+        <input type="radio" id="jpizza" name="velicina">
+        <label for="jpizza">Jumbo Pizza</label><br>
+        <input type="submit" value="Submit">
+      </form>
     </div>
     <footer>Copyright 2024 Broj Telefona: 020 429 595 Adresa: Hvarska ul. 48, 20000, Dubrovnik
     </footer>

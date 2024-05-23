@@ -3,37 +3,44 @@ console.log("u pizze.js")
 var pizze = {
     "mijesana": {
         "naziv": "Miješana",
-        "cijena": 54,
+        "velikacijena": 54,
+        "jumbocijena": 61,
         "slika": "pizza-mijesana.jpg",
         "sastojci": ["šunka", "sir", "šampinjoni"]
     },
     "margarita": {
         "naziv": "Majstor i Margarita",
-        "cijena": 46,
+        "velikacijena": 46,
+        "jumbocijena": 53,
         "slika": "pizza-margarita.jpg",
         "sastojci": ["sir"]
     },
     "tuna": {
         "naziv": "Tuna",
-        "cijena": 50,
+        "velikacijena": 50,
+        "jumbocijena": 57,
         "slika": "pizza-tuna.jpg",
         "sastojci": ["tuna","luk","maslina","sir"]
     },
     "sira4": {
         "naziv": "4 vrste sira",
-        "cijena": 48,
+        "velikacijena": 48,
+        "jumbocijena": 55,
         "slika": "pizza-4sira.jpg",
         "sastojci": ["sir"]
     },
     "dubrovnik": {
         "naziv": "Dubrovnik",
-        "cijena": 53,
+        "velikacijena": 53,
+        "jumbocijena": 60,
         "slika": "pizza-dubrovnik.jpg",
         "sastojci": ["pršut","sir","umak od rajčica", "rikula", "mozzarela", "parmezan", "masline"]
     }
 }
 function naruciPizzu(pizza){
     console.log("Naručujem pizzu.", pizza)
+    const narudzbaElement = document.getElementById("narudzba");
+    narudzbaElement.style.display = "block"
 }
 function odaberiPizzu(pizza) {
     console.log("Odabrana je pizza:", pizza)
@@ -41,8 +48,10 @@ function odaberiPizzu(pizza) {
     detaljElement.style.display = "block"
     const imeElement = document.getElementById("imepizze");
     imeElement.innerText = pizza.naziv
-    const cijenaElement =document.getElementById("cijena");
-    cijenaElement.innerText = pizza.cijena + " kn"
+    const velikacijenaElement =document.getElementById("velikacijena");
+    velikacijenaElement.innerText = pizza.velikacijena + " kn"
+    const jumbocijenaElement =document.getElementById("jumbocijena");
+    jumbocijenaElement.innerText = pizza.jumbocijena + " kn"
     const sastojciElement =document.getElementById("sastojci");
     sastojciElement.innerText = pizza.sastojci
     const slikaElement =document.getElementById("slika");
@@ -50,6 +59,7 @@ function odaberiPizzu(pizza) {
     const buttonElement = document.getElementById("naruciButton");
     buttonElement.onclick = () => naruciPizzu(pizza)
 }
+
 var listaPizzaElement = document.getElementById("popisPizza");
 console.log(listaPizzaElement)
 for (const [key, pizza] of Object.entries(pizze)) {
@@ -61,3 +71,6 @@ for (const [key, pizza] of Object.entries(pizze)) {
 
 const detaljElement = document.getElementById("detaljiPizze");
 detaljElement.style.display = "none"
+
+const narudzbaElement = document.getElementById("narudzba");
+narudzbaElement.style.display = "none"
