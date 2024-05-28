@@ -42,6 +42,7 @@ function naruciPizzu(pizza){
     console.log("Naručujem pizzu.", pizza)
     const narudzbaElement = document.getElementById("narudzba");
     narudzbaElement.style.display = "block"
+    promjenaUNarudzbi()
 }
 
 
@@ -63,9 +64,41 @@ function odaberiPizzu(pizza) {
     buttonElement.onclick = () => naruciPizzu(pizza)
 }
 
+function imaPodatkeZaDostavu() {
+    const narudzbaFormElement = document.forms.namedItem("narudzbaForm")
+    const fn=narudzbaFormElement.fname.value
+    if (! fn) {
+        console.log("fn missing")
+        return false;
+    }
+    const ln=narudzbaFormElement.lname.value
+    if (! ln) {
+        console.log("ln missing")
+        return false;
+    }
+    const nm=narudzbaFormElement.number.value
+    if (! nm){
+        console.log("nm missing")
+        return false;        
+    }
+    const ad=narudzbaFormElement.address.value
+    if (! ad){
+        console.log("ad missing")
+        return false;        
+    }
+    // ako su svi popunjeni vrati true
+    return true;
+
+}
+
 function promjenaUNarudzbi() {
     console.log("Promjena u narudzbi!")
-
+    const imaSveElement = document.getElementById("imaSve");
+    if (imaPodatkeZaDostavu()) {
+        imaSveElement.style.display = "block"
+    } else {
+        imaSveElement.style.display = "none"
+    }
 }
 
 var listaPizzaElement = document.getElementById("popisPizza");

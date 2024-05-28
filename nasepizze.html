@@ -34,9 +34,9 @@
       </div>
     </div>
     <div id="narudzba">
-      <form>
+      <form name="narudzbaForm">
         <label for="fname">Ime:</label><br>
-        <input type="text" id="fname" name="fname" onchange="promjenaUNarudzbi()"><br>
+        <input type="text" id="fname" name="fname" onchange="promjenaUNarudzbi()" value=""><br>
         <label for="lname">Prezime:</label><br>
         <input type="text" id="lname" name="lname" onchange="promjenaUNarudzbi()"><br>
         <label for="number">Broj telefona:</label><br>
@@ -53,7 +53,9 @@
         <label for="rajcica"> Rajčica</label><br>
         <input type="checkbox" id="peperoni" name="peperoni" value="Peperoni" onchange="promjenaUNarudzbi()">
         <label for="peperoni">Peperoni</label><br><br>
-        <input type="submit" value="Submit">
+        <div id="imaSve" >
+          <input type="submit" value="To je to, narucujem!">
+        </div>
       </form>
     </div>
     <footer>Copyright 2024 Broj Telefona: 020 429 595 Adresa: Hvarska ul. 48, 20000, Dubrovnik
