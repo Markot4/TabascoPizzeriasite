@@ -42,7 +42,10 @@ function naruciPizzu(pizza){
     console.log("Naručujem pizzu.", pizza)
     const narudzbaElement = document.getElementById("narudzba");
     narudzbaElement.style.display = "block"
+    naruciButtonElement = document.getElementById("naruciButton")
+    naruciButtonElement.style.display = "none"
     promjenaUNarudzbi()
+
 }
 
 
@@ -99,6 +102,15 @@ function promjenaUNarudzbi() {
     } else {
         imaSveElement.style.display = "none"
     }
+}
+
+function odustani(){
+    console.log("Otkazana narudzba")
+    const otkazananarudzba = document.getElementById("narudzba");
+    otkazananarudzba.style.display = "none"
+    naruciButtonElement = document.getElementById("naruciButton")
+    naruciButtonElement.style.display = "block"
+
 }
 
 var listaPizzaElement = document.getElementById("popisPizza");
