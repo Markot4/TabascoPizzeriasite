@@ -37,7 +37,12 @@
       </div>
     </div>
     <div id="narudzba">
-      <div id="ukupnaCijena"></div>
+      <div id="ukupnaCijenaDiv">
+        Ukupna cijena
+        <span>
+          <span id="ukupnaCijena"></span> kn
+        </span>
+      </div>
       <form name="narudzbaForm">
         <label for="fname">Ime:</label><br>
         <input type="text" id="fname" name="fname" onchange="promjenaUNarudzbi()" value=""><br>
@@ -53,10 +58,10 @@
         <input type="radio" id="jpizza" name="velicina" value="jumbo" onclick="promjenaUNarudzbi()">
         <label for="jpizza">Jumbo Pizza</label><br>
         <p>Dodaci: </p>
-        <input type="checkbox" id="rajcica" name="rajcica" value="Rajcica" onchange="promjenaUNarudzbi()">
-        <label for="rajcica"> Rajčica</label><br>
-        <input type="checkbox" id="peperoni" name="peperoni" value="Peperoni" onchange="promjenaUNarudzbi()">
-        <label for="peperoni">Peperoni</label><br><br>
+        <input type="checkbox" id="rajcica" name="rajcica" value="1" onchange="promjenaUNarudzbi()">
+        <label for="rajcica"> Rajčica 1kn</label><br>
+        <input type="checkbox" id="peperoni" name="peperoni" value="5" onchange="promjenaUNarudzbi()">
+        <label for="peperoni">Peperoni 5kn</label><br><br>
         <div id="imaSve" >
           <input type="submit" value="To je to, narucujem!">
         </div>

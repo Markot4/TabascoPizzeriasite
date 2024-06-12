@@ -100,8 +100,6 @@ function izracunajCijenu() {
     const jumbocijenaElement = document.getElementById("jumbocijena")
     const velikaCijena = velikacijenaElement.innerText
     const jumboCijena = jumbocijenaElement.innerText
-    console.log("Velika cijena:", velikaCijena)
-    console.log("jumbo cijena:", jumboCijena)
     const velikaIliMala = document.querySelector('input[name="velicina"]:checked').value
     let cijena
     if (velikaIliMala == "velika") {
@@ -109,6 +107,11 @@ function izracunajCijenu() {
     } else {
         cijena = jumboCijena
     }
+    cijena = parseInt(cijena)
+    const rajcicaElement = document.getElementById("rajcica")
+    const rajcica = rajcicaElement.checked ? rajcicaElement.value : 0
+    cijena = cijena + parseInt(rajcica)
+
     return cijena
 }
 
