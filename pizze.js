@@ -111,6 +111,9 @@ function izracunajCijenu() {
     const rajcicaElement = document.getElementById("rajcica")
     const rajcica = rajcicaElement.checked ? rajcicaElement.value : 0
     cijena = cijena + parseInt(rajcica)
+    const peperoniElement = document.getElementById("peperoni")
+    const peperoni = peperoniElement.checked ? peperoniElement.value : 0
+    cijena = cijena + parseInt(peperoni)
 
     return cijena
 }
