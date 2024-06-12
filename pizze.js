@@ -56,9 +56,9 @@ function odaberiPizzu(pizza) {
     const imeElement = document.getElementById("imepizze");
     imeElement.innerText = pizza.naziv
     const velikacijenaElement =document.getElementById("velikacijena");
-    velikacijenaElement.innerText = pizza.velikacijena + " kn"
+    velikacijenaElement.innerText = pizza.velikacijena
     const jumbocijenaElement =document.getElementById("jumbocijena");
-    jumbocijenaElement.innerText = pizza.jumbocijena + " kn"
+    jumbocijenaElement.innerText = pizza.jumbocijena
     const sastojciElement =document.getElementById("sastojci");
     sastojciElement.innerText = pizza.sastojci
     const slikaElement =document.getElementById("slika");
@@ -94,9 +94,30 @@ function imaPodatkeZaDostavu() {
 
 }
 
+function izracunajCijenu() {
+    console.log("izracunavam cijenu")
+    const velikacijenaElement = document.getElementById("velikacijena")
+    const jumbocijenaElement = document.getElementById("jumbocijena")
+    const velikaCijena = velikacijenaElement.innerText
+    const jumboCijena = jumbocijenaElement.innerText
+    console.log("Velika cijena:", velikaCijena)
+    console.log("jumbo cijena:", jumboCijena)
+    const velikaIliMala = document.querySelector('input[name="velicina"]:checked').value
+    let cijena
+    if (velikaIliMala == "velika") {
+        cijena = velikaCijena
+    } else {
+        cijena = jumboCijena
+    }
+    return cijena
+}
+
 function promjenaUNarudzbi() {
     console.log("Promjena u narudzbi!")
-    const imaSveElement = document.getElementById("imaSve");
+    const cijena = izracunajCijenu()
+    const cijenaElement = document.getElementById("ukupnaCijena")
+    cijenaElement.innerText = cijena;
+    const imaSveElement = document.getElementById("imaSve")
     if (imaPodatkeZaDostavu()) {
         imaSveElement.style.display = "block"
     } else {
