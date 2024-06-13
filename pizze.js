@@ -133,6 +133,16 @@ function promjenaUNarudzbi() {
         nedostajuPodatciElement.style.display = "block"
     }
 }
+function primljenaNarudzba(){
+    console.log("Narudzba je primljena!")
+    const potvrda = document.getElementById("potvrda");
+    potvrda.style.display = "block"
+    const narudzbaElement = document.getElementById("narudzba");
+    narudzbaElement.style.display = "none"
+    const detaljElement = document.getElementById("detaljiPizze");
+    detaljElement.style.display = "none"
+
+}
 
 function odustani(){
     console.log("Otkazana narudzba")
@@ -152,8 +162,16 @@ for (const [key, pizza] of Object.entries(pizze)) {
     listaPizzaElement.appendChild(pizzaElement)
 }
 
-const detaljElement = document.getElementById("detaljiPizze");
-detaljElement.style.display = "none"
+function initialize() {
+    const detaljElement = document.getElementById("detaljiPizze");
+    detaljElement.style.display = "none"
+    
+    const narudzbaElement = document.getElementById("narudzba");
+    narudzbaElement.style.display = "none"
+    
+    const potvrdaElement = document.getElementById("potvrda");
+    potvrdaElement.style.display = "none"
+    
+} 
 
-const narudzbaElement = document.getElementById("narudzba");
-narudzbaElement.style.display = "none"
+initialize()
