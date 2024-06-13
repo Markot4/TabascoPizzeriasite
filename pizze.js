@@ -124,10 +124,13 @@ function promjenaUNarudzbi() {
     const cijenaElement = document.getElementById("ukupnaCijena")
     cijenaElement.innerText = cijena;
     const imaSveElement = document.getElementById("imaSve")
+    const nedostajuPodatciElement = document.getElementById("nedostajuPodatci")
     if (imaPodatkeZaDostavu()) {
         imaSveElement.style.display = "block"
+        nedostajuPodatciElement.style.display = "none"
     } else {
         imaSveElement.style.display = "none"
+        nedostajuPodatciElement.style.display = "block"
     }
 }
 

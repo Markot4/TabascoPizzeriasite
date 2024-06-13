@@ -38,20 +38,12 @@
     </div>
     <div id="narudzba">
       <div id="ukupnaCijenaDiv">
-        Ukupna cijena
+        <h2>Ukupna cijena</h2>
         <span>
           <span id="ukupnaCijena"></span> kn
         </span>
       </div>
       <form name="narudzbaForm">
-        <label for="fname">Ime:</label><br>
-        <input type="text" id="fname" name="fname" onchange="promjenaUNarudzbi()" value=""><br>
-        <label for="lname">Prezime:</label><br>
-        <input type="text" id="lname" name="lname" onchange="promjenaUNarudzbi()"><br>
-        <label for="number">Broj telefona:</label><br>
-        <input type="text" id="number" name="number" onchange="promjenaUNarudzbi()"><br>
-        <label for="address">Adresa</label><br>
-        <input for="text" id="address" name="address" onchange="promjenaUNarudzbi()"><br>
         <p>Velika ili Jumbo:</p>
         <input type="radio" id="vpizza" name="velicina" value="velika" checked="checked" onclick="promjenaUNarudzbi()">
         <label for="vpizza">Velika Pizza</label><br>
@@ -62,6 +54,19 @@
         <label for="rajcica"> Rajčica 1kn</label><br>
         <input type="checkbox" id="peperoni" name="peperoni" value="5" onchange="promjenaUNarudzbi()">
         <label for="peperoni">Peperoni 5kn</label><br><br>
+        <div>
+          <h3>Podaci za dostavu</h3>
+          <div id="nedostajuPodatci">Molim vas ispunite sve podatke za dostavu!</div>
+          <label for="fname">Ime:</label><br>
+          <input type="text" id="fname" name="fname" onkeyup="promjenaUNarudzbi()" value=""><br>
+          <label for="lname">Prezime:</label><br>
+          <input type="text" id="lname" name="lname" onkeyup="promjenaUNarudzbi()"><br>
+          <label for="number">Broj telefona:</label><br>
+          <input type="text" id="number" name="number" onkeyup="promjenaUNarudzbi()"><br>
+          <label for="address">Adresa</label><br>
+          <input for="text" id="address" name="address"  onkeyup="promjenaUNarudzbi()"><br>
+        </div>
+
         <div id="imaSve" >
           <input type="submit" value="To je to, narucujem!">
         </div>

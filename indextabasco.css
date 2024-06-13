@@ -13,3 +13,8 @@ footer {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
+
+#nedostajuPodatci {
+    color: brown;
+    font-size: 15px;
+}
