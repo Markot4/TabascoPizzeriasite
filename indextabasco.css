@@ -18,3 +18,28 @@ footer {
     color: brown;
     font-size: 15px;
 }
+
+.pizze {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slikaPizze {
+    max-width: 400px; 
+    height: auto;
+}
+
+.pizzeItem {
+    margin: 4%
+}
+
+@media screen and (max-width: 768px) {
+    /* Styles for mobile devices */
+    .pizze {
+      flex-direction: column; /* Stack items vertically */
+    }
+    .slikaPizze {
+        max-width: 75%;
+        height: auto;
+    }
+}
