@@ -44,6 +44,8 @@ function naruciPizzu(pizza){
     narudzbaElement.style.display = "block"
     naruciButtonElement = document.getElementById("naruciButton")
     naruciButtonElement.style.display = "none"
+    detaljiElement = document.getElementById("detaljiPizze")
+    detaljiElement.style.display = "none"
     promjenaUNarudzbi()
 
 }
