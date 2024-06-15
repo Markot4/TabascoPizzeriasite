@@ -48,6 +48,9 @@ function naruciPizzu(pizza){
 
 }
 
+function raspisiSastojke(sastojci) {
+    return sastojci.join(", ")
+}
 
 function odaberiPizzu(pizza) {
     console.log("Odabrana je pizza:", pizza)
@@ -60,7 +63,7 @@ function odaberiPizzu(pizza) {
     const jumbocijenaElement =document.getElementById("jumbocijena");
     jumbocijenaElement.innerText = pizza.jumbocijena
     const sastojciElement =document.getElementById("sastojci");
-    sastojciElement.innerText = pizza.sastojci
+    sastojciElement.innerText = raspisiSastojke(pizza.sastojci)
     const slikaElement =document.getElementById("slika");
     slikaElement.src = "slike/" + pizza.slika
     const buttonElement = document.getElementById("naruciButton");

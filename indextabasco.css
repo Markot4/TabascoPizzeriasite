@@ -33,13 +33,23 @@ footer {
     margin: 4%
 }
 
+.wrapMe {
+    max-width: 80%;
+}
+
 @media screen and (max-width: 768px) {
     /* Styles for mobile devices */
     .pizze {
-      flex-direction: column; /* Stack items vertically */
+        max-width: 90%;
+        flex-direction: column; /* Stack items vertically */
     }
     .slikaPizze {
         max-width: 75%;
         height: auto;
     }
+    .pizzeItem {
+        max-width: 80%
+        margin: 4%
+    }
+    
 }
