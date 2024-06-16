@@ -9,6 +9,10 @@ body {
     display: flex;
 }
 
+#izbornik > a {
+    margin: 20px;
+}
+
 footer {
     background-color:azure;
     font-family: 'Times New Roman', Times, serif;
@@ -55,4 +59,9 @@ footer {
     #izbornik {
         flex-direction: column;
     }
+
+    #izbornik > a {
+        margin: 3px;
+    }
+    
 }
