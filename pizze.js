@@ -152,6 +152,10 @@ function primljenaNarudzba(){
     const odabranapizza = document.getElementById("odabranapizza");
     const imePizze = narudzbaImePizze.innerText;
     odabranapizza.innerText = imePizze;
+    const velicinaPizze = document.getElementById("velicinaPizze");
+    const velicinaElement = document.getElementById("velikaIliMala");
+    const velicinaP = velicinaElement.innerText;
+    velicinaPizze.innerText = velicinaP;
     const mojaadresa = document.getElementById("mojaadresa");
     const addressElement = document.getElementById("address");
     const address = addressElement.value;
