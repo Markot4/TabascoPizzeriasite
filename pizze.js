@@ -148,7 +148,18 @@ function primljenaNarudzba(){
     narudzbaElement.style.display = "none"
     const detaljElement = document.getElementById("detaljiPizze");
     detaljElement.style.display = "none"
-
+    const narudzbaImePizze = document.getElementById("narudzbaImePizze");
+    const odabranapizza = document.getElementById("odabranapizza");
+    const imePizze = narudzbaImePizze.innerText;
+    odabranapizza.innerText = imePizze;
+    const mojaadresa = document.getElementById("mojaadresa");
+    const addressElement = document.getElementById("address");
+    const address = addressElement.value;
+    mojaadresa.innerText = address;
+    const potvrdenaCijena = document.getElementById("potvrdenaCijena");
+    const potCijenaElement = document.getElementById("ukupnaCijena");
+    const cijena = potCijenaElement.innerText;
+    potvrdenaCijena.innerText = cijena;
 }
 
 function odustani(){
