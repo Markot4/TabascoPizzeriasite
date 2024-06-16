@@ -152,10 +152,10 @@ function primljenaNarudzba(){
     const odabranapizza = document.getElementById("odabranapizza");
     const imePizze = narudzbaImePizze.innerText;
     odabranapizza.innerText = imePizze;
-    const velicinaPizze = document.getElementById("velicinaPizze");
-    const velicinaElement = document.getElementById("velikaIliMala");
-    const velicinaP = velicinaElement.innerText;
-    velicinaPizze.innerText = velicinaP;
+    const velikaIliJumbo = document.querySelector('input[name="velicina"]:checked').value;
+    const velicinaPizzeElement = document.getElementById("velicinaPizze");
+    velicinaPizzeElement.innerText = velikaIliJumbo.charAt(0).toUpperCase() + velikaIliJumbo.slice(1); // Kapitalizira prvu slova
+    console.log("Veličina pizze:", velikaIliJumbo);
     const mojaadresa = document.getElementById("mojaadresa");
     const addressElement = document.getElementById("address");
     const address = addressElement.value;
