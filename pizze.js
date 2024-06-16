@@ -40,7 +40,9 @@ var pizze = {
 
 function naruciPizzu(pizza){
     console.log("Naručujem pizzu.", pizza)
-    const narudzbaElement = document.getElementById("narudzba");
+    narudzbaImePizzeElement = document.getElementById("narudzbaImePizze")
+    narudzbaImePizzeElement.innerText = pizza.naziv
+    const narudzbaElement = document.getElementById("narudzba")
     narudzbaElement.style.display = "block"
     naruciButtonElement = document.getElementById("naruciButton")
     naruciButtonElement.style.display = "none"
