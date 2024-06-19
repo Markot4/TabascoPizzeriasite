@@ -70,6 +70,7 @@ function odaberiPizzu(pizza) {
     sastojciElement.innerText = raspisiSastojke(pizza.sastojci)
     const slikaElement =document.getElementById("slika");
     slikaElement.src = "slike/" + pizza.slika
+    slikaElement.alt = "Slika pizze: " + pizza.naziv
     const buttonElement = document.getElementById("naruciButton");
     buttonElement.onclick = () => naruciPizzu(pizza)
 }
