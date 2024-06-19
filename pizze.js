@@ -201,6 +201,12 @@ function odustani(){
 
 }
 
+function gotovaNarudzba() {
+    console.log("narudzba je gotova")
+    const potvrdaElement = document.getElementById("potvrda");
+    potvrdaElement.style.display = "none"
+}
+
 var listaPizzaElement = document.getElementById("popisPizza");
 console.log(listaPizzaElement)
 for (const [key, pizza] of Object.entries(pizze)) {
