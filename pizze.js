@@ -156,6 +156,12 @@ function primljenaNarudzba(){
     const velicinaPizzeElement = document.getElementById("velicinaPizze");
     velicinaPizzeElement.innerText = velikaIliJumbo.charAt(0).toUpperCase() + velikaIliJumbo.slice(1); // Kapitalizira prvu slova
     console.log("Veličina pizze:", velikaIliJumbo);
+    const dodanaRajcicaElement = document.getElementById("rajcica");
+    const dodanarajcica = dodanaRajcicaElement.checked;
+    console.log("Dodana rajčica", dodanarajcica);
+    const dodaniPeperoniElement = document.getElementById("peperoni");
+    const dodanipeperoni = dodaniPeperoniElement.checked;
+    console.log("Dodani peperoni", dodanipeperoni);
     const mojaadresa = document.getElementById("mojaadresa");
     const addressElement = document.getElementById("address");
     const address = addressElement.value;
@@ -164,6 +170,26 @@ function primljenaNarudzba(){
     const potCijenaElement = document.getElementById("ukupnaCijena");
     const cijena = potCijenaElement.innerText;
     potvrdenaCijena.innerText = cijena;
+    const brojTelefonaElement = document.getElementById("number");
+    const brojTelefona = brojTelefonaElement.value;
+    console.log("broj telefona je:", brojTelefona)
+    const konacnaNarudzba = {
+        "pizza": imePizze,
+        "velcina": velikaIliJumbo,
+        "rajcica": dodanarajcica,
+        "peperoni": dodanipeperoni,
+        "adresa": address,
+        "cijena": cijena,
+        "telefon": brojTelefona,
+        "vrijeme": new Date()
+    }
+    spremiULocalStorage(konacnaNarudzba)
+}
+
+function spremiULocalStorage(narudzba) {
+    // u stvarnosti bi vjerojatno pozvao neki api ili web funkciju
+    console.log("spremam u local storage:", narudzba)
+    localStorage.setItem("tabascoPizzaNarudzba", narudzba);
 }
 
 function odustani(){
