@@ -58,8 +58,8 @@ footer {
         height: auto;
     }
     .pizzeItem {
-        max-width: 80%
-        margin: 4%
+        max-width: 80%;
+        margin: 4%;
     }
     #izbornik {
         flex-direction: column;
