@@ -1,79 +1,22 @@
-/* Global Styles */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+body {
+    background-color: blanchedalmond;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    background-color: #f7f7f7;
-    display: flex;
-    flex-direction: column;
 }
 
-h1, h2, h3 {
-    color: #222;
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: #007BFF;
-}
-
-a:hover {
-    color: #0056b3;
-}
-
-/* Container */
-body > div {
-    flex: 1;
-}
-
-/* Navigation Menu */
 #izbornik {
-    background-color: #343a40;
+    background-color: aqua;
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
-    justify-content: center;
-    padding: 10px 0;
 }
 
 #izbornik > a {
-    color: #f8f9fa;
-    margin: 0 15px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
+    margin: 20px;
 }
 
-#izbornik > a:hover {
-    background-color: #495057;
-    border-radius: 5px;
-}
-
-/* Footer */
 footer {
-    background-color: #343a40;
-    color: #f8f9fa;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: auto;
-}
-
-/* Specific Styles */
-#akcija, #onama, #pizze, #narudzba {
-    margin: 20px auto;
-    max-width: 1200px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
-}
-
-#akcija img, #onama img {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+    background-color:azure;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 
 #nedostajuPodatci {
@@ -81,28 +24,22 @@ footer {
     font-size: 15px;
 }
 
-/* Pizza List */
 .pizze {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .slikaPizze {
     max-width: 400px; 
     height: auto;
-    border-radius: 10px;
 }
 
 .pizzeItem {
-    margin: 2%;
-    flex-basis: calc(33% - 4%);
-    text-align: center;
+    margin: 4%
 }
 
 .wrapMe {
     max-width: 80%;
-    margin: 0 auto;
 }
 
 #narudzbaImePizze {
@@ -110,42 +47,26 @@ footer {
     font-size: 25px; 
 }
 
-button, input[type="button"] {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover, input[type="button"]:hover {
-    background-color: #0056b3;
-}
-
-/* Media Queries for Mobile */
 @media screen and (max-width: 768px) {
+    /* Styles for mobile devices */
     .pizze {
+        max-width: 90%;
         flex-direction: column; /* Stack items vertically */
     }
-
     .slikaPizze {
-        max-width: 100%;
+        max-width: 75%;
         height: auto;
     }
-
     .pizzeItem {
-        flex-basis: 100%;
-        margin: 10px 0;
+        max-width: 80%;
+        margin: 4%;
     }
-
     #izbornik {
         flex-direction: column;
     }
 
     #izbornik > a {
-        margin: 5px 0;
-        padding: 10px;
+        margin: 3px;
     }
+    
 }
